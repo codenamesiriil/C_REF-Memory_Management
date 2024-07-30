@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
+#include "cns_mem_man.h"
 
 void	*cns_memcpy(void *dst, const void *src, size_t n)
 {
@@ -9,7 +8,7 @@ void	*cns_memcpy(void *dst, const void *src, size_t n)
 		return (NULL);
 
 	for (i = 0; i < n; i++)
-		((char *)dst)[i] + ((const char *)src)[i];
-	
+		((unsigned char *)dst)[i] = ((const unsigned char *)src)[i];
+
 	return (dst);
 }
